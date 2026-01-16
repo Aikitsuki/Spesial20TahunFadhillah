@@ -30,9 +30,17 @@
         }
 
         @keyframes gradientFlow {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
         }
 
         /* Enhanced Sparkle Effect */
@@ -57,10 +65,20 @@
         }
 
         @keyframes twinkle {
-            0%, 100% { opacity: 0; transform: scale(0.5); }
-            50% { opacity: 0.8; transform: scale(1); }
+
+            0%,
+            100% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+
+            50% {
+                opacity: 0.8;
+                transform: scale(1);
+            }
         }
 
+        /* Generate 50 sparkles with different positions and animations */
         .magic-sparkles::before,
         .magic-sparkles::after {
             content: '';
@@ -79,8 +97,13 @@
         }
 
         @keyframes sparkleLayer {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(-50px); }
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-50px);
+            }
         }
 
         /* Floating Hearts */
@@ -101,8 +124,13 @@
         }
 
         @keyframes floatHeart {
-            0% { transform: translate(0, 100vh) rotate(0deg); }
-            100% { transform: translate(var(--translate-x, 0), -100vh) rotate(360deg); }
+            0% {
+                transform: translate(0, 100vh) rotate(0deg);
+            }
+
+            100% {
+                transform: translate(var(--translate-x, 0), -100vh) rotate(360deg);
+            }
         }
 
         /* Welcome Section */
@@ -149,8 +177,6 @@
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
-            display: flex;       /* Tambahan agar layout rapi */
-            flex-direction: column; /* Tambahan agar layout rapi */
         }
 
         .memory-card:hover {
@@ -176,48 +202,27 @@
 
         .memory-img {
             width: 100%;
-            height: 250px; /* Ukuran standar */
+            height: 250px;
             object-fit: cover;
             border-radius: 15px;
             margin-bottom: 1rem;
             transition: transform 0.5s ease;
         }
 
-        /* --- FITUR TAMBAHAN AGAR FOTO NYAMAN DILIHAT --- */
-        
-        /* 1. Foto Sendiri: Fokus ke wajah/mata (agar tidak terpotong leher) */
-        .foto-fokus-wajah .memory-img {
-            height: 280px; 
-            object-fit: cover; 
-            object-position: top center; 
-        }
-
-        /* 2. Foto Berdua: Full Layar (agar terlihat seperti kembar) */
-        .foto-full-layar {
-            grid-column: 1 / -1; 
-            width: 100%;
-        }
-        .foto-full-layar .memory-img {
-            height: auto; 
-            max-height: 60vh; 
-            object-position: center;
-        }
-        /* ----------------------------------------------- */
-
         .memory-card:hover .memory-img {
-            transform: scale(1.03); /* Zoom smooth */
+            transform: scale(1.05);
         }
 
         .memory-date {
             font-family: 'Dancing Script', cursive;
             color: #ff69b4;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             margin-bottom: 0.5rem;
         }
 
         .memory-caption {
             font-size: 1rem;
-            line-height: 1.6;
+            line-height: 1.5;
             color: #666;
         }
 
@@ -241,8 +246,15 @@
         }
 
         @keyframes heartbeat {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
         }
 
         .final-message p {
@@ -273,18 +285,38 @@
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
         }
 
+        /* Animations */
         @keyframes fadeInScale {
-            0% { opacity: 0; transform: scale(0.8); }
-            100% { opacity: 1; transform: scale(1); }
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
 
         @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
         }
 
         /* Generate Hearts */
@@ -297,15 +329,32 @@
         }
 
         /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 12px; }
-        ::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.4); }
-        ::-webkit-scrollbar-thumb { background: linear-gradient(45deg, #ff69b4, #da70d6); border-radius: 6px; }
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(45deg, #ff69b4, #da70d6);
+            border-radius: 6px;
+        }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .welcome h1 { font-size: 3rem; }
-            .memory-container { grid-template-columns: 1fr; }
-            .final-message h2 { font-size: 2.5rem; }
+            .welcome h1 {
+                font-size: 3rem;
+            }
+
+            .memory-container {
+                grid-template-columns: 1fr;
+            }
+
+            .final-message h2 {
+                font-size: 2.5rem;
+            }
         }
     </style>
 </head>
@@ -326,20 +375,18 @@
     </section>
 
     <div class="memory-container">
-        <div class="memory-card foto-fokus-wajah">
-            <img src="./d1.jpg" alt="Her Smile" class="memory-img">
+        <div class="memory-card">
+            <img src="./d1.jpg" alt="First Date" class="memory-img">
             <div class="memory-date">Senyumanmu</div>
             <div class="memory-caption">Aku suka banget liat senyum ayang dan perhatian ayang waktu liat mataku, aku merasa lebih intens, aku suka liat bulu matamu yang kamu otak-atik itu, cantiknyaaa cwe mamass hehehe ❤️</div>
         </div>
-
-        <div class="memory-card foto-full-layar">
-            <img src="./d2.jpg" alt="Together Vibes" class="memory-img">
+        <div class="memory-card">
+            <img src="./d2.jpg" alt="Beach Day" class="memory-img">
             <div class="memory-date">Kita Selamanya</div>
             <div class="memory-caption">Semoga di usia ayang yang ke-20 tahun ini membawa berkah ya, apa yang adik semogakan bisa tercapai, lihat kita berdua kayak kembar mwahh 😊💕</div>
         </div>
-
         <div class="memory-card">
-            <img src="./d3.jpg" alt="Pretty Soul" class="memory-img">
+            <img src="./d3.jpg" alt="Movie Night" class="memory-img">
             <div class="memory-date">Bidadariku</div>
             <div class="memory-caption">Ayang udah berhasil dewasa, ayang udah bisa membedakan mana baik buruk, ayang dah gak OVT teruss, ayang wajib punya harapan yaa walau banyak banget cobaan-nya. mas disamping adik, always :" 🌸💖</div>
         </div>
@@ -354,7 +401,7 @@
             Aku bersyukur memilikimu. Semoga di usia yang baru ini, kamu semakin dewasa, semakin bahagia, dan tercapai segala cita-citamu.<br>
             Ingatlah, saat kamu merasa lelah atau dunia terasa berat, aku akan selalu ada di sini untuk meluk adik 🌸💖.
         </p>
-        <p>Mas Sayang Adik, Hari Ini dan Selamanya. ✨</p>
+        <p>Mas Sayang Adik , Hari Ini dan Selamanya. ✨</p>
         <a href="#" class="goodbye-btn">Peluk Jauh, lagi LDR-KKN hehe💝</a>
     </section>
 </body>
